@@ -1,0 +1,25 @@
+name: Validate Documentation
+
+on:
+  push:
+    paths:
+      - 'docs/**'
+      - 'README.md'
+  pull_request:
+    paths:
+      - 'docs/**'
+      - 'README.md'
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Check documentation files
+        run: |
+          test -d docs
+          test -f README.md
+          echo "Documentation files found successfully."
