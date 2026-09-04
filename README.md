@@ -65,3 +65,5 @@ RaceDay
 │   └── RaceDay_Database.sql
 │
 └── README.md
+
+<!-- Documentation validated -->
